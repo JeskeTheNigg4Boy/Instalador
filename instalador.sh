@@ -9,6 +9,7 @@ mkdir -p /var/backups/uex-user
 mkdir -p /var/backups/uex-user/user
 mkdir -p /var/backups/uex-user/pass
 mkdir -p /var/backups/uex-user/group
+mkdir -p ~/.config/rclone/
 echo "Carpetas Creadas"
 sleep 2
 clear
@@ -72,7 +73,7 @@ echo "Creando alias"
 echo 'alias scriptsV2="cd /usr/local/sbin/scriptsV2"' >> ~/.bashrc
 echo 'alias mysql="cd /var/mysql"' >> ~/.bashrc
 echo 'alias backups="cd /var/backups/uex-user"' >> ~/.bashrc
-echo 'alias Exmenu="bash /usr/local/sbin/scriptsV2/CETOS.sh"'
+echo 'alias Exmenu="bash /usr/local/sbin/scriptsV2/CETOS.sh"' 
 
 #ESTO SIEMPRE ABAJO DEL TODO DEL BASHRC !!!NO TOCAR!!!!
 echo 'export PATH="$PATH:/usr/local/sbin/scriptsV2/*"' >> ~/.bashrc
@@ -126,6 +127,6 @@ git clone --depth 1 https://github.com/JeskeTheNigg4Boy/Uex-Server /usr/local/sb
 echo "Scripts importados"
 sleep 2
 clear
-
+source ~/.bashrc
 echo "Servidor perparado para la utilizacion, utilize el alias Exmenu para poder utilizar CETOS"
 sleep 2
