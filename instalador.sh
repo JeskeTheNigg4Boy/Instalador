@@ -128,5 +128,5 @@ echo "Scripts importados"
 sleep 2
 clear
 source ~/.bashrc
-echo "Servidor perparado para la utilizacion, utilize el alias Exmenu para poder utilizar CETOS"
+echo "Servidor perparado para la utilizacion, porfavor introdusca el siquiente comando para refrescar el PATH "source ~/.bashrc" y utilize el alias Exmenu para poder utilizar CETOS"
 sleep 2
