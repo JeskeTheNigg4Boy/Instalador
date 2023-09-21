@@ -73,7 +73,7 @@ echo "Creando alias"
 echo 'alias scriptsV2="cd /usr/local/sbin/scriptsV2"' >> ~/.bashrc
 echo 'alias mysql="cd /var/mysql"' >> ~/.bashrc
 echo 'alias backups="cd /var/backups/uex-user"' >> ~/.bashrc
-echo 'alias Exmenu="bash /usr/local/sbin/scriptsV2/CETOS.sh"' 
+echo 'alias Exmenu="bash /usr/local/sbin/scriptsV2/CETOS.sh"' >> ~/.bashrc
 
 #ESTO SIEMPRE ABAJO DEL TODO DEL BASHRC !!!NO TOCAR!!!!
 echo 'export PATH="$PATH:/usr/local/sbin/scriptsV2/*"' >> ~/.bashrc
