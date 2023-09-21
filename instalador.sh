@@ -9,52 +9,58 @@ mkdir -p /var/backups/uex-user
 mkdir -p /var/backups/uex-user/user
 mkdir -p /var/backups/uex-user/pass
 mkdir -p /var/backups/uex-user/group
-echo "Carpetas directorios"
+echo "Carpetas Creadas"
 sleep 2
 clear
-#Instalador de paquetes
-echo "Instalado paquetes"
-sudo apt-get install net-tools
-sudo apt-get install bat
-sudo apt-get install apache2
-sudo apt-get install base-files
-sudo apt-get install base-passwd
-sudo apt-get install bash
-sudo apt-get install bat
-sudo apt-get install cloud-init
-sudo apt-get install dash
-sudo apt-get install diffutils
-sudo apt-get install findutils
-sudo apt-get install firewalld
-sudo apt-get install grep
-sudo apt-get install gzip
-sudo apt-get install hostname
-sudo apt-get install init
-sudo apt-get install libapache2-mod-php
-sudo apt-get install libdebconfclient0
-sudo apt-get install libfwupdplugin1
-sudo apt-get install libsodium23
-sudo apt-get install libxmlb1
-sudo apt-get install linux-generic
-sudo apt-get install lsscsi
-sudo apt-get install mysql-server
-sudo apt-get install ncurses-base
-sudo apt-get install ncurses-bin
-sudo apt-get install net-tools
-sudo apt-get install nmap
-sudo apt-get install openssh-server
-sudo apt-get install php
-sudo apt-get install php-mysql
-sudo apt-get install python3-nacl
-sudo apt-get install python3-pymacaroons
-sudo apt-get install rclone
-sudo apt-get install rsync
-sudo apt-get install sysvinit-utils
-sudo apt-get install tree
-sudo apt-get install ubuntu-minimal
-sudo apt-get install ubuntu-server
-sudo apt-get install ubuntu-standard
-sudo apt-get install x11-xserver-utils
+# Lista de paquetes a instalar
+paquetes=(
+  "net-tools"
+  "bat"
+  "apache2"
+  "base-files"
+  "base-passwd"
+  "bash"
+  "bat"
+  "cloud-init"
+  "dash"
+  "diffutils"
+  "findutils"
+  "firewalld"
+  "grep"
+  "gzip"
+  "hostname"
+  "init"
+  "libapache2-mod-php"
+  "libdebconfclient0"
+  "libfwupdplugin1"
+  "libsodium23"
+  "libxmlb1"
+  "linux-generic"
+  "lsscsi"
+  "mysql-server"
+  "ncurses-base"
+  "ncurses-bin"
+  "net-tools"
+  "nmap"
+  "openssh-server"
+  "php"
+  "php-mysql"
+  "python3-nacl"
+  "python3-pymacaroons"
+  "rclone"
+  "rsync"
+  "sysvinit-utils"
+  "tree"
+  "ubuntu-minimal"
+  "ubuntu-server"
+  "ubuntu-standard"
+  "x11-xserver-utils"
+)
+
+for paquete in "${paquetes[@]}"
+do
+  sudo apt-get install -y "$paquete"
+done
 sleep 2
 
 echo "Paquetes instalados"
