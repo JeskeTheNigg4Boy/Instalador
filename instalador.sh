@@ -107,15 +107,20 @@ sleep 1
 clear
 
 #Importador rclone
-echo "Configurando Rclone"
-sleep 2
-echo "[Respaldos]
+if [ ! -f ~/.config/rclone/rclone.conf ]; then
+    echo "Configurando Rclone"
+    sleep 2
+    mkdir -p ~/.config/rclone/  # Crear el directorio si no existe
+    touch ~/.config/rclone/rclone.conf  # Crear el archivo si no existe
+    # Configurar el contenido del archivo rclone.conf
+    echo "[Respaldos]
 type = drive
 client_secret = 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
 scope = drive
 root_folder_id = 0AN9Na8E-CdO7Uk9PVA
 token = {\"access_token\":\"ya29.a0AfB_byC73aU6LPuFYnZBJ3vPU197ecMheqib-tjSnaE-aamOgB1h3iJCnSoxAZbrUFxZQkMkZ7Gc1uzhNeRo1YmykVmsAroq1mlMQw-6FI8qd3EPxb7Z63PpDIZijsS5A-4aw3GGk7uKsPLjUMKozb6GnPofbT_shWtraCgYKAU8SARMSFQGOcNnCmUShABs0Z7IA12CSskQ>
 client_id = 1033571120017-mh9m4ke5s300hd4llislteqfvl7i0voc.apps.googleusercontent.com" >> ~/.config/rclone/rclone.conf
+fi
 echo "Reclone configurado"
 sleep 2
 clear
@@ -128,5 +133,5 @@ echo "Scripts importados"
 sleep 2
 clear
 source ~/.bashrc
-echo "Servidor perparado para la utilizacion, porfavor introdusca el siquiente comando para refrescar el PATH "source ~/.bashrc" y utilize el alias Exmenu para poder utilizar CETOS"
+echo "Servidor perparado para la utilizacion, porfavor introdusca el siquiente comando para refrescar el PATH source ~/.bashrc y utilize el alias Exmenu para poder utilizar CETOS"
 sleep 2
