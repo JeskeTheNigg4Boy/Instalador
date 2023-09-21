@@ -10,6 +10,7 @@ mkdir -p /var/backups/uex-user/user
 mkdir -p /var/backups/uex-user/pass
 mkdir -p /var/backups/uex-user/group
 mkdir -p ~/.config/rclone/
+mkdir -p /home/pablo/Descargas/uex-user
 echo "Carpetas Creadas"
 sleep 2
 clear
