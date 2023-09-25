@@ -108,26 +108,30 @@ sleep 1
 clear
 
 #Importador rclone
+rclone_config="[Respaldos]
+type = drive
+client_secret = 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
+scope = drive
+root_folder_id = 1z5ZHeB5dXDjy0jYto86-kvhwfYBpL4mM
+token = {\"access_token\":\"ya29.a0AfB_byC85cMxavs9QBej2d1WYeTw8k6WcC0c12LtnwR0T2VyYpiMljpmMvhhDkghv2OJtDHc-WsMhrk_bLVaJts_QcNsD_-zZkUHPTZE2n2d7ECsOXTgNoUm21_hvX4dzVh7Rafx4o8vwXyGfs9b2C1BGNyTu3bUsi_qaCgYKAd8SARESFQGOcNnCP6vq7idyHT8IIKsbr8v>
+client_id = 824810420848-1a26jdr7kmmrqkrsq0c5iqa2iuceii4l.apps.googleusercontent.com"
+
+# Verificar si el archivo de configuración de rclone existe
 if [ ! -f ~/.config/rclone/rclone.conf ]; then
     echo "Configurando Rclone"
     sleep 2
     mkdir -p ~/.config/rclone/  # Crear el directorio si no existe
     touch ~/.config/rclone/rclone.conf  # Crear el archivo si no existe
 
-    # Configurar el contenido del archivo rclone.conf
-    echo "[Respaldos]
-type = drive
-client_secret = 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
-scope = drive
-root_folder_id = 0AN9Na8E-CdO7Uk9PVA
-token = {\"access_token\":\"ya29.a0AfB_byC73aU6LPuFYnZBJ3vPU197ecMheqib-tjSnaE-aamOgB1h3iJCnSoxAZbrUFxZQkMkZ7Gc1uzhNeRo1YmykVmsAroq1mlMQw-6FI8qd3EPxb7Z63PpDIZijsS5A-4aw3GGk7uKsPLjUMKozb6GnPofbT_shWtraCgYKAU8SARMSFQGOcNnCmUShABs0Z7IA12CS>
-client_id = 824810420848-1a26jdr7kmmrqkrsq0c5iqa2iuceii4l.apps.googleusercontent.com" >> ~/.config/rclone/rclone.conf
+    # Agregar la configuración de rclone al archivo
+    echo "$rclone_config" >> ~/.config/rclone/rclone.conf
 
     echo "Rclone configurado"
     sleep 2
 else
     echo "El archivo de configuración de Rclone ya existe."
 fi
+
 
 #Importador de  Scripts desde github
 echo "Importando Scripts"
