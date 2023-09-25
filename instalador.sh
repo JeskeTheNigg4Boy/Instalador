@@ -116,11 +116,11 @@ if [ ! -f ~/.config/rclone/rclone.conf ]; then
     # Configurar el contenido del archivo rclone.conf
     echo "[Respaldos]
 type = drive
-client_secret = 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
+client_secret = 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
 scope = drive
 root_folder_id = 0AN9Na8E-CdO7Uk9PVA
-token = {\"access_token\":\"ya29.a0AfB_byC73aU6LPuFYnZBJ3vPU197ecMheqib-tjSnaE-aamOgB1h3iJCnSoxAZbrUFxZQkMkZ7Gc1uzhNeRo1YmykVmsAroq1mlMQw-6FI8qd3EPxb7Z63PpDIZijsS5A-4aw3GGk7uKsPLjUMKozb6GnPofbT_shWtraCgYKAU8SARMSFQGOcNnCmUShABs0Z7IA12CSskQ>
-client_id = 1033571120017-mh9m4ke5s300hd4llislteqfvl7i0voc.apps.googleusercontent.com" >> ~/.config/rclone/rclone.conf
+token = {"access_token":"ya29.a0AfB_byC73aU6LPuFYnZBJ3vPU197ecMheqib-tjSnaE-aamOgB1h3iJCnSoxAZbrUFxZQkMkZ7Gc1uzhNeRo1YmykVmsAroq1mlMQw-6FI8qd3EPxb7Z63PpDIZijsS5A-4aw3GGk7uKsPLjUMKozb6GnPofbT_shWtraCgYKAU8SARMSFQGOcNnCmUShABs0Z7IA12CS>
+client_id = 824810420848-1a26jdr7kmmrqkrsq0c5iqa2iuceii4l.apps.googleusercontent.com" >> ~/.config/rclone/rclone.conf
 fi
 echo "Reclone configurado"
 sleep 2
