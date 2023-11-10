@@ -75,7 +75,6 @@ clear
 #Crear la base a "mano"
 echo "Creando la base de datos"
 sleep 2
-#!/bin/bash
 
 echo "-- phpMyAdmin SQL Dump" > uexproyecto.sql
 echo "-- version 5.2.1" >> uexproyecto.sql
@@ -847,6 +846,22 @@ SOURCE /home/pablo/uexproyecto.sql;
 GRANT SELECT, SHOW VIEW, RELOAD, REPLICATION CLIENT, EVENT, TRIGGER ON *.* TO 'AdminDB'@'localhost';
 FLUSH PRIVILEGES;
 exit
+#Ajusted de red
+echo "Aplicnado agustes de red"
+sudo echo "# This is the network config written by 'subiquity'
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    enp0s3:
+      addresses:
+        - 192.168.1.69/24
+      gateway4: 192.168.1.1
+      nameservers:
+        addresses: [8.8.8.8, 8.8.4.4]" > /etc/netplan/00-installer-config.yaml
+sudo netplan apply
+echo "Red Configurada"
+sleep 2
 
 #La pagina web
 echo "Preparando el sitio Web"
