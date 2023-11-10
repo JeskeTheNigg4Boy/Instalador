@@ -76,16 +76,6 @@ clear
 echo "Creando la base de datos"
 sleep 2
 
-echo "-- phpMyAdmin SQL Dump" > uexproyecto.sql
-echo "-- version 5.2.1" >> uexproyecto.sql
-echo "-- https://www.phpmyadmin.net/" >> uexproyecto.sql
-echo "--" >> uexproyecto.sql
-echo "-- Servidor: 127.0.0.1:3306" >> uexproyecto.sql
-echo "--  25-09-2023 a las 03:01:43" >> uexproyecto.sql
-echo "--  8.1.0" >> uexproyecto.sql
-echo "-- PHP: 7.4.3-4ubuntu2.19" >> uexproyecto.sql
-echo "" >> uexproyecto.sql
-
 # Copiar el contenido del coddigo SQL
 cat << 'EOF' >> uexproyecto.sql
 
@@ -137,7 +127,7 @@ sleep 2
 #La pagina web
 echo "Preparando el sitio Web"
 sleep 2
-sudo git clone https://github.com/JBrusco27/ProyectoUEX2.0 /var/www/
+sudo git clone -f https://github.com/JBrusco27/ProyectoUEX2.0 /var/www/
 sudo chown -R $USER:$USER /var/www/ProyectoUEX2.0
 sudo touch /etc/apache2/sites-available/ProyectoUEX2.0.conf
 echo "<VirtualHost *:80>
