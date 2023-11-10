@@ -18,6 +18,7 @@ sleep 2
 clear
 # Lista de paquetes a instalar
 paquetes=(
+  "iptables"
   "net-tools"
   "bat"
   "apache2"
