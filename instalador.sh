@@ -835,9 +835,10 @@ EOF
 
 
 #La base para la web
-echo "Perparando la base de datos"
-echo "Ingrese contraseña del root"
-mysql -u root -p
+# Asigna la contraseña de root
+MYSQL_ROOT_PASSWORD="123"
+SQL_FILE=$(mktemp)
+cat <<EOF > "$SQL_FILE"
 CREATE USER 'AdminDB'@'localhost' IDENTIFIED BY 'password';
 GRANT ALL PRIVILEGES ON *.* TO 'AdminDB'@'localhost' WITH GRANT OPTION;
 CREATE DATABASE uexproyecto;
@@ -845,7 +846,13 @@ USE uexproyecto;
 SOURCE /home/pablo/uexproyecto.sql;
 GRANT SELECT, SHOW VIEW, RELOAD, REPLICATION CLIENT, EVENT, TRIGGER ON *.* TO 'AdminDB'@'localhost';
 FLUSH PRIVILEGES;
-exit
+EOF
+mysql -u root -p"$MYSQL_ROOT_PASSWORD" < "$SQL_FILE"
+
+rm "$SQL_FILE"
+
+
+
 #Ajusted de red
 echo "Aplicnado agustes de red"
 sudo echo "# This is the network config written by 'subiquity'
