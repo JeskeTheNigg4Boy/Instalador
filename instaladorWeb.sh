@@ -38,6 +38,7 @@ sleep 2
 
 # La página web
 echo "Preparando el sitio Web"
+sudo ufw allow in "Apache"
 sleep 2
 sudo git clone https://github.com/JBrusco27/ProyectoUEX2.0 /var/www/html/ProyectoUEX2.0
 sleep 2
