@@ -39,15 +39,15 @@ sleep 2
 # La página web
 echo "Preparando el sitio Web"
 sleep 2
-sudo git clone https://github.com/JBrusco27/ProyectoUEX2.0 /var/www/ProyectoUEX2.0
+sudo git clone https://github.com/JBrusco27/ProyectoUEX2.0 /var/www/html/ProyectoUEX2.0
 sleep 2
-sudo chown -R $USER:$USER /var/www/ProyectoUEX2.0
+sudo chown -R $USER:$USER/var/www/html/ProyectoUEX2.0
 sudo touch /etc/apache2/sites-available/ProyectoUEX2.0.conf
 echo "<VirtualHost *:80>
     ServerName ProyectoUEX2.0
     ServerAlias www.ProyectoUEX2.0
     ServerAdmin webmaster@localhost
-    DocumentRoot /var/www/ProyectoUEX2.0
+    DocumentRoot /var/www/html/ProyectoUEX2.0
     ErrorLog ${APACHE_LOG_DIR}/error.log
     CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
@@ -66,7 +66,7 @@ sudo bash -c "echo '<?php
 
 \$conn = new PDO(\"mysql:host=\$servername;dbname=\$dbname\", \$username, \$password);
 \$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-?>' > /var/www/ProyectoUEX2.0/Backend/connect.php"
+?>' > /var/www/html/ProyectoUEX2.0/Backend/connect.php"
 
 sleep 1
 echo "Página web en línea"
