@@ -27,7 +27,7 @@ network:
   ethernets:
     enp0s3:
       addresses:
-        - 192.168.1.69/24
+        - 192.168.1.70/24
       gateway4: 192.168.1.1
       nameservers:
         addresses: [8.8.8.8, 8.8.4.4]" > /etc/netplan/00-installer-config.yaml
