@@ -5,6 +5,8 @@ sleep 2
 sudo groupadd usuarios
 mkdir -p /usr/local/sbin/scriptsV2/
 mkdir -p /var/mysql/
+mkdir -p /var/mysql/DBuser
+mkdir -p /var/mysql/DBweb
 mkdir -p /var/backups/uex-user
 mkdir -p /var/backups/uex-user/user
 mkdir -p /var/backups/uex-user/pass
@@ -16,6 +18,8 @@ sleep 2
 clear
 # Lista de paquetes a instalar
 paquetes=(
+  "linuxlogo"
+  "iptables"
   "net-tools"
   "bat"
   "apache2"
@@ -75,7 +79,7 @@ echo 'alias scriptsV2="cd /usr/local/sbin/scriptsV2"' >> ~/.bashrc
 echo 'alias mysql="cd /var/mysql"' >> ~/.bashrc
 echo 'alias backups="cd /var/backups/uex-user"' >> ~/.bashrc
 echo 'alias Exmenu="bash /usr/local/sbin/scriptsV2/CETOS.sh"' >> ~/.bashrc
-
+echo "linuxlogo"
 #ESTO SIEMPRE ABAJO DEL TODO DEL BASHRC !!!NO TOCAR!!!!
 echo 'export PATH="$PATH:/usr/local/sbin/scriptsV2/*"' >> ~/.bashrc
 
@@ -91,7 +95,7 @@ echo "Instalando y configurando el servicio SSH"
 sudo apt-get install openssh-server
 sudo systemctl start ssh
 sudo systemctl enable ssh
-echo 'Port 22' >> /etc/ssh/sshd_config
+echo 'Port 30005' >> /etc/ssh/sshd_config
 sleep 3
 echo "Servicio SSH instalado"
 sleep 1
@@ -142,4 +146,6 @@ sleep 2
 clear
 source ~/.bashrc
 echo "Servidor perparado para la utilizacion, porfavor introdusca el siquiente comando para refrescar el PATH source ~/.bashrc y utilize el alias Exmenu para poder utilizar CETOS"
+
+echo "Instaalador del sitio Web descargado. Ejecutelo para poner en linea"
 sleep 2
