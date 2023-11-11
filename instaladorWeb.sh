@@ -19,18 +19,7 @@ mysql -u root -p"$MYSQL_ROOT_PASSWORD" < "$SQL_FILE"
 
 rm "$SQL_FILE"
 
-echo "Aplicando ajustes de red"
-sudo echo "# Configuracion de la red
-network:
-  version: 2
-  renderer: networkd
-  ethernets:
-    enp0s3:
-      addresses:
-        - 192.168.1.70/24
-      gateway4: 192.168.1.1
-      nameservers:
-        addresses: [8.8.8.8, 8.8.4.4]" > /etc/netplan/00-installer-config.yaml
+
 
 sudo netplan apply
 echo "Red configurada"
