@@ -31,7 +31,7 @@ sudo ufw allow in "Apache"
 sleep 2
 sudo git clone https://github.com/JBrusco27/ProyectoUEX2.0 /var/www/html/ProyectoUEX2.0
 sleep 2
-sudo chown -R $USER:$USER/var/www/html/ProyectoUEX2.0
+sudo chown -R $USER:$USER /var/www/html/ProyectoUEX2.0
 sudo touch /etc/apache2/sites-available/ProyectoUEX2.0.conf
 echo "<VirtualHost *:80>
     ServerName ProyectoUEX2.0
