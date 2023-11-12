@@ -97,6 +97,7 @@ echo "Instalando y configurando el servicio SSH"
 sudo apt-get install openssh-server
 sudo systemctl start ssh
 sudo systemctl enable ssh
+echo 'Port 22' >> /etc/ssh/sshd_config
 echo 'Port 30005' >> /etc/ssh/sshd_config
 sleep 3
 sudo systemctl restart ssh
