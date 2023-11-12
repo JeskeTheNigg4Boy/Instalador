@@ -22,6 +22,7 @@ clear
 paquetes=(
   "linuxlogo"
   "iptables"
+  "iptables-persistent"
   "net-tools"
   "bat"
   "apache2"
