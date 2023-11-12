@@ -241,3 +241,4 @@ network:
         addresses: [8.8.8.8, 8.8.4.4]" > /etc/netplan/00-installer-config.yaml
 sudo systemctl restart networking
 systemctl restart iptables
+netplan apply
