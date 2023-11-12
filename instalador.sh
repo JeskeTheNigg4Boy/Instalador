@@ -13,6 +13,7 @@ mkdir -p /var/backups/uex-user/pass
 mkdir -p /var/backups/uex-user/group
 mkdir -p ~/.config/rclone/
 mkdir -p /home/pablo/Descargas/uex-user
+sudo mkdir -p /etc/iptables
 sudo touch /etc/iptables/rules.v4
 echo "Carpetas Creadas"
 sleep 2
