@@ -21,7 +21,7 @@ sudo touch /home/pablo/uexproyecto.sql
 
 
 
-echo "-- phpMyAdmin SQL Dump
+sudo echo "-- phpMyAdmin SQL Dump
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
@@ -1027,3 +1027,15 @@ network:
 sudo systemctl restart networking
 systemctl restart iptables
 netplan apply
+
+sudo echo "<?php
+
+\$servername = \"localhost:3306\"; // Dirección del servidor de la base de datos
+\$username = \"adminDB\"; // Nombre de usuario de la base de datos
+\$password = \"password\"; // Contraseña de la base de datos
+\$dbname = \"uexproyecto\"; // Nombre de la base de datos
+echo "Adaptando Base De Datos"
+\$conn = new PDO(\"mysql:host=\$servername;dbname=\$dbname\", \$username, \$password);
+\$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+?>" > /var/www/ProyectoUEX2.0/Backend/connect.php
+
