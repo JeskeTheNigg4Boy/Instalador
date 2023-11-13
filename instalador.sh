@@ -1039,3 +1039,4 @@ echo "Adaptando Base De Datos"
 \$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 ?>" > /var/www/ProyectoUEX2.0/Backend/connect.php
 
+sudo chmod +x /usr/local/sbin/scriptsV2/*
