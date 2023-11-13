@@ -156,7 +156,7 @@ CREATE USER 'AdminDB'@'localhost' IDENTIFIED BY 'password';
 GRANT ALL PRIVILEGES ON *.* TO 'AdminDB'@'localhost' WITH GRANT OPTION;
 CREATE DATABASE uexproyecto;
 USE uexproyecto;
-SOURCE /home/pablo/uexproyecto.sql;
+SOURCE /home/pablo/Instalador/uexproyecto.sql;
 GRANT SELECT, SHOW VIEW, RELOAD, REPLICATION CLIENT, EVENT, TRIGGER ON *.* TO 'AdminDB'@'localhost';
 FLUSH PRIVILEGES;
 EOF
