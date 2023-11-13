@@ -15,6 +15,7 @@ mkdir -p ~/.config/rclone/
 mkdir -p /home/pablo/Descargas/uex-user
 sudo mkdir -p /etc/iptables
 sudo touch /etc/iptables/rules.v4
+sudo touch /home/pablo/uexproyecto.sql
 echo "Carpetas Creadas"
 sleep 2
 clear
