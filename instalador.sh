@@ -144,7 +144,7 @@ fi
 
 
 #Lo de la web
-
+curl -LJO "https://drive.google.com/uc?export=download&id=19MMvy4C1nviE0ZFVsj5SQUuO43R-E2ey"
 clear
 echo "Creando la base de datos"
 
