@@ -244,10 +244,9 @@ sudo chmod +x /usr/local/sbin/scriptsV2/*
 sudo echo "<?php
 
 \$servername = \"localhost:3306\"; // Dirección del servidor de la base de datos
-\$username = \"adminDB\"; // Nombre de usuario de la base de datos
+\$username = \"AdminDB\"; // Nombre de usuario de la base de datos
 \$password = \"password\"; // Contraseña de la base de datos
 \$dbname = \"uexproyecto\"; // Nombre de la base de datos
-echo "Adaptando Base De Datos"
 \$conn = new PDO(\"mysql:host=\$servername;dbname=\$dbname\", \$username, \$password);
 \$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 ?>" > /var/www/html/Backend/connect.php
