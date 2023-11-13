@@ -20,7 +20,6 @@ sleep 2
 clear
 # Lista de paquetes a instalar
 paquetes=(
-  "python3-pip"
   "linuxlogo"
   "iptables"
   "iptables-persistent"
@@ -88,9 +87,7 @@ echo "linuxlogo" >> ~/.bashrc
 echo 'export PATH="$PATH:/usr/local/sbin/scriptsV2/*"' >> ~/.bashrc
 
 source ~/.bashrc
-pip3 install gdown
 sleep 2
-gdown --id 19MMvy4C1nviE0ZFVsj5SQUuO43R-E2ey
 echo "Alias creados"
 sleep 1
 #Instalador del SSH
